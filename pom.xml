@@ -2,8 +2,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>isp-lab-1</groupId>
-    <artifactId>isp-lab-1</artifactId>
+    <groupId>edu.tucn.isp</groupId>
+    <artifactId>lab5</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -18,15 +18,13 @@
             <email>student@emailaddress.com</email>
         </developer>
     </developers>
-	
+
     <organization>
         <name>Technical University of Cluj-Napoca</name>
     </organization>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- class that has the main method -->
-        <mainClass>isp.lab1.MathBasicOperations</mainClass>
         <!-- name appended to standard jar name to indicate shaded/executable version -->
         <shadedClassifierName>executable</shadedClassifierName>
         <junit-version>4.13.1</junit-version>
@@ -36,23 +34,6 @@
     </properties>
 
     <dependencies>
-
-        <!-- Dependency to check java code style g
-
-        <dependency>
-            <groupId>com.puppycrawl.tools</groupId>
-            <artifactId>checkstyle</artifactId>
-            <version>10.7.0</version>
-        </dependency>
-        --!>
-
-        <!-- Everyone needs a logger -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>${slf4j-version}</version>
-        </dependency>
-
         <!-- Unit testing is mandatory -->
         <dependency>
             <groupId>junit</groupId>
@@ -68,7 +49,7 @@
     <build>
         <!-- Goals may be set in the IDE or the pom -->
         <!-- IDE goals override the defaultGoal -->
-        <defaultGoal>clean compile package exec:java</defaultGoal> 
+        <defaultGoal>clean compile package exec:java</defaultGoal>
         <plugins>
             <plugin>
                 <!-- Select the version of the compiler and binary file -->
@@ -100,7 +81,7 @@
                         </goals>
                         <configuration>
                             <shadedArtifactAttached>true</shadedArtifactAttached>
-                            <shadedClassifierName>${shadedClassifierName}</shadedClassifierName> 
+                            <shadedClassifierName>${shadedClassifierName}</shadedClassifierName>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
                             <transformers>
                                 <transformer
@@ -138,7 +119,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.17</version>
             </plugin>
-			
+
 			<plugin>
 				<groupId>com.rimerosolutions.maven.plugins</groupId>
 				<artifactId>wrapper-maven-plugin</artifactId>

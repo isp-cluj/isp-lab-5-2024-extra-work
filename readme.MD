@@ -1,50 +1,26 @@
-# Exemplu proiect template pentru laboratoarele ISP
+# Implement the following exercises
 
-Dependentele proiectlui:
-- Maven 3 
-- Java 1.8 
+In this lab you will create two small Java applications by using UML diagrams as reference. Please consider following general notes before start implementing:
 
-Pentru a rula proiectul se va executa comanda mvn din radacina proiectului unde sa gaseste fisierul pom.xml.
+1. Look at some LocalDate examples in edu.tucn.isp.ex0.LocalDateExample
+2. Create the Java application based on the provided UML diagrams.
+3. Add needed constructors, getters, setters, toString() and any other method you consider necessary.
+4. Implement the main method in edu.tucn.isp.ex(1|2).Exercise(1|2).
+5. Implement the unit tests provided in the corresponding section.
 
-La rulare se va apela metoda main ce face parte din clasa specificata in fisierul pom.xml in proprietate 'mainClass':
+## Exercise 1
+![Exercise 1 class](docs/ex1.png)
 
-    <mainClass>Example</mainClass>
+Given the UML class diagram above, implement the corresponding Java program.
+Have a look at the UML use-case diagram below for more implementation details.
 
-Pentru a transmite argumente din linia de comanda atunci cand se utilizeaza maven se va modifica elementul 'commandlineArgs' in fisierl pom.xml conform exemplului:
-
-    <commandlineArgs>-jar ${project.build.directory}/${project.build.finalName}-${shadedClassifierName}.jar arg1 arg2</commandlineArgs>
-
-## Rularea testelor
-
-Pentru a rula toate testele JUnit se va rula comanda:
-
-    mvn test
-
-## Rularea programului 
-
-    mvn compile exec:java 
-
-## Rulare default
-
-Pentru a executa un ciclu complet de compilare, testare si rulare sa executa comanda:
-
-    mvn
-
-Prin comanda 'mvn' maven va rula 'default maven goals' setate in fisierul pom.xml, si anume:
-
-    <defaultGoal>clean compile package exec:java</defaultGoal> 
-
-## Rulare alternativa utilizand mvn wrapper 
-
-Alternativ, comenzile anterioare pot fi rulate utilizand mvn wrapper (https://github.com/takari/maven-wrapper) utilizand comanda mvnw in cazul in care maven nu este instalat. Exemplu:
-
-    mvnw test 
-    
-## Generarea documentatiei javadoc
-
-Pentru a genera documentatia proiectului se va executa comanda:
-
-    mvn javadoc:javadoc
-   
+![Exercise 1 use-case](docs/ex1-use-case.png)
 
 
+## Exercise 2
+![Exercise 2 class](docs/ex2.png)
+
+Given the UML class diagram above, implement the corresponding Java program.
+Have a look at the UML use-case diagram below for more implementation details.
+
+![Exercise 2 use-case](docs/ex2-use-case.png)
