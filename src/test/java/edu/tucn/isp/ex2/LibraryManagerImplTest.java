@@ -35,6 +35,6 @@ public class LibraryManagerImplTest {
     }
 
     @Test
-    public void returnBook() {
+    public void testReturnBook() {
     }
 }
