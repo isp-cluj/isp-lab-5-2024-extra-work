@@ -20,6 +20,6 @@ public class TestManagerImplTest {
     }
 
     @Test
-    public void findTesteeReslts() {
+    public void testFindTesteeReslts() {
     }
 }
