@@ -1,6 +1,6 @@
 # Implement the following exercises
 
-In this lab you will create two small Java applications by using UML diagrams as reference. Please consider following general notes before start implementing:
+In this lab you will create two small Java applications by using UML diagrams as reference. Please consider the following general notes before start implementing:
 
 1. Look at some LocalDate examples in edu.tucn.isp.ex0.LocalDateExample and edu.tucn.isp.ex0.RecordWithLambdaExample
 2. Create the Java application based on the provided UML diagrams.
