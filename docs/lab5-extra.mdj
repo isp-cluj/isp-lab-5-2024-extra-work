@@ -2566,7 +2566,7 @@
 											"top": 558,
 											"width": 338.5205078125,
 											"height": 13,
-											"text": "-bookCatalogs: Array<BookCalatog>",
+											"text": "-bookCatalogs: BookCalatog[*]",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2583,7 +2583,7 @@
 											"top": 573,
 											"width": 338.5205078125,
 											"height": 13,
-											"text": "-customers: Array<Customer>",
+											"text": "-customers: Customer[*]",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2600,7 +2600,7 @@
 											"top": 588,
 											"width": 338.5205078125,
 											"height": 13,
-											"text": "-borrowings: Array<Borrowing>",
+											"text": "-borrowings: Borrowing[*]",
 											"horizontalAlignment": 0
 										}
 									],
@@ -2719,7 +2719,7 @@
 											"top": 686,
 											"width": 338.5205078125,
 											"height": 13,
-											"text": "+searchBooksByAuthor(fn: String, ln: String): Array<Book>",
+											"text": "+searchBooksByAuthor(fn: String, ln: String): Book[*]",
 											"horizontalAlignment": 0
 										},
 										{
@@ -4882,7 +4882,7 @@
 											"top": 816,
 											"width": 338.5205078125,
 											"height": 13,
-											"text": "+searchBooksByAuthor(fn: String, ln: String): Array<Book>",
+											"text": "+searchBooksByAuthor(fn: String, ln: String): Book[*]",
 											"horizontalAlignment": 0
 										},
 										{
@@ -6184,7 +6184,8 @@
 							},
 							"name": "bookCatalogs",
 							"visibility": "private",
-							"type": "Array<BookCalatog>"
+							"type": "BookCalatog",
+							"multiplicity": "*"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -6194,7 +6195,10 @@
 							},
 							"name": "customers",
 							"visibility": "private",
-							"type": "Array<Customer>"
+							"type": {
+								"$ref": "AAAAAAGOZS6Wj4zEpOE="
+							},
+							"multiplicity": "*"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -6204,7 +6208,10 @@
 							},
 							"name": "borrowings",
 							"visibility": "private",
-							"type": "Array<Borrowing>"
+							"type": {
+								"$ref": "AAAAAAGOcJS8s64Jw9s="
+							},
+							"multiplicity": "*"
 						}
 					],
 					"operations": [
@@ -6368,7 +6375,10 @@
 									"_parent": {
 										"$ref": "AAAAAAGOcJ29FdlABek="
 									},
-									"type": "Array<Book>",
+									"type": {
+										"$ref": "AAAAAAGOZRTla0nfm14="
+									},
+									"multiplicity": "*",
 									"direction": "return"
 								}
 							]
@@ -6834,7 +6844,10 @@
 									"_parent": {
 										"$ref": "AAAAAAGOcKVSdj/mfj0="
 									},
-									"type": "Array<Book>",
+									"type": {
+										"$ref": "AAAAAAGOZRTla0nfm14="
+									},
+									"multiplicity": "*",
 									"direction": "return"
 								}
 							]
@@ -7155,7 +7168,7 @@
 											"top": 226,
 											"width": 166.892578125,
 											"height": 13,
-											"text": "-choices: Array<String>",
+											"text": "-choices: String[*]",
 											"horizontalAlignment": 0
 										},
 										{
@@ -7172,7 +7185,7 @@
 											"top": 241,
 											"width": 166.892578125,
 											"height": 13,
-											"text": "-rightAnswers: Array<int>",
+											"text": "-rightAnswers: int[*]",
 											"horizontalAlignment": 0
 										}
 									],
@@ -7385,7 +7398,7 @@
 											"top": 234,
 											"width": 168.73974609375,
 											"height": 13,
-											"text": "-questions: Array<Question>",
+											"text": "-questions: Question[*]",
 											"horizontalAlignment": 0
 										}
 									],
@@ -7850,7 +7863,7 @@
 											"top": 366,
 											"width": 342.13232421875,
 											"height": 13,
-											"text": "-tests: Array<Test>",
+											"text": "-tests: Test[*]",
 											"horizontalAlignment": 0
 										},
 										{
@@ -7867,7 +7880,7 @@
 											"top": 381,
 											"width": 342.13232421875,
 											"height": 13,
-											"text": "-takenTests: <TakenTest>",
+											"text": "-takenTests: TakenTest[*]",
 											"horizontalAlignment": 0
 										}
 									],
@@ -7952,7 +7965,7 @@
 											"top": 449,
 											"width": 342.13232421875,
 											"height": 13,
-											"text": "+findTesteeResults(testeeName: String): Array<TakenTest>",
+											"text": "+findTesteeResults(testeeName: String): TakenTest[*]",
 											"horizontalAlignment": 0
 										}
 									],
@@ -8832,7 +8845,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -240,
+											"left": -320,
 											"top": 16,
 											"width": 64.32080078125,
 											"height": 13,
@@ -8845,9 +8858,9 @@
 												"$ref": "AAAAAAGOcL92i8K6Ydk="
 											},
 											"font": "Arial;13;1",
-											"left": 133,
+											"left": 93,
 											"top": 542,
-											"width": 230.13427734375,
+											"width": 308.17236328125,
 											"height": 13,
 											"text": "TestManager"
 										},
@@ -8859,7 +8872,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -240,
+											"left": -320,
 											"top": 16,
 											"width": 73.67724609375,
 											"height": 13,
@@ -8873,16 +8886,16 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -240,
+											"left": -320,
 											"top": 16,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 128,
+									"left": 88,
 									"top": 535,
-									"width": 240.13427734375,
+									"width": 318.17236328125,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGOcL92i8K7nWg="
@@ -8908,7 +8921,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -120,
+									"left": -160,
 									"top": 8,
 									"width": 10,
 									"height": 10
@@ -8933,9 +8946,9 @@
 												"$ref": "AAAAAAGOcMAl7sh35Sk="
 											},
 											"font": "Arial;13;0",
-											"left": 133,
+											"left": 93,
 											"top": 565,
-											"width": 230.13427734375,
+											"width": 308.17236328125,
 											"height": 13,
 											"text": "+addTest(test: Test)",
 											"horizontalAlignment": 0
@@ -8950,9 +8963,9 @@
 												"$ref": "AAAAAAGOcMC2EcqxAmQ="
 											},
 											"font": "Arial;13;0",
-											"left": 133,
+											"left": 93,
 											"top": 580,
-											"width": 230.13427734375,
+											"width": 308.17236328125,
 											"height": 13,
 											"text": "+selectRandomTest(): Test",
 											"horizontalAlignment": 0
@@ -8967,9 +8980,9 @@
 												"$ref": "AAAAAAGOcMEA38uJvdM="
 											},
 											"font": "Arial;13;0",
-											"left": 133,
+											"left": 93,
 											"top": 595,
-											"width": 230.13427734375,
+											"width": 308.17236328125,
 											"height": 13,
 											"text": "+addTakenTest(tknTest: TakenTest)",
 											"horizontalAlignment": 0
@@ -8984,18 +8997,18 @@
 												"$ref": "AAAAAAGOcMOzddQ211M="
 											},
 											"font": "Arial;13;0",
-											"left": 133,
+											"left": 93,
 											"top": 610,
-											"width": 230.13427734375,
+											"width": 308.17236328125,
 											"height": 13,
-											"text": "+findTesteeResults(testeeName: String)",
+											"text": "+findTesteeResults(testeeName: String): TakenTest[*]",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 128,
+									"left": 88,
 									"top": 560,
-									"width": 240.13427734375,
+									"width": 318.17236328125,
 									"height": 68
 								},
 								{
@@ -9009,7 +9022,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -120,
+									"left": -160,
 									"top": 8,
 									"width": 10,
 									"height": 10
@@ -9025,7 +9038,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -120,
+									"left": -160,
 									"top": 8,
 									"width": 10,
 									"height": 10
@@ -9033,9 +9046,9 @@
 							],
 							"font": "Arial;13;0",
 							"containerChangeable": true,
-							"left": 128,
+							"left": 88,
 							"top": 512,
-							"width": 240.13427734375,
+							"width": 318.17236328125,
 							"height": 117,
 							"stereotypeDisplay": "icon",
 							"nameCompartment": {
@@ -9076,7 +9089,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 261,
+									"left": 260,
 									"top": 482,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -9097,7 +9110,7 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 276,
+									"left": 275,
 									"top": 482,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -9118,7 +9131,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 232,
+									"left": 231,
 									"top": 483,
 									"height": 13,
 									"alpha": -1.5707963267948966,
@@ -9137,7 +9150,7 @@
 								"$ref": "AAAAAAGOcLWjfbN9HxE="
 							},
 							"lineStyle": 1,
-							"points": "247:467;247:512",
+							"points": "247:467;246:512",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAGOcL/brsbA6Io="
@@ -9418,7 +9431,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 430,
+									"left": 449,
 									"top": 579,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -9439,7 +9452,7 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 430,
+									"left": 449,
 									"top": 594,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -9460,7 +9473,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 431,
+									"left": 450,
 									"top": 549,
 									"height": 13,
 									"alpha": -1.5707963267948966,
@@ -9544,7 +9557,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 393,
+									"left": 431,
 									"top": 578,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -9564,7 +9577,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 396,
+									"left": 434,
 									"top": 592,
 									"height": 13,
 									"alpha": -0.7853981633974483,
@@ -9584,7 +9597,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 389,
+									"left": 427,
 									"top": 551,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -9630,7 +9643,7 @@
 								"$ref": "AAAAAAGOcMRFVdZRyd8="
 							},
 							"lineStyle": 1,
-							"points": "495:570;368:570",
+							"points": "495:570;406:570",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAGOcMUbN9pcuPo="
@@ -9726,7 +9739,8 @@
 							},
 							"name": "choices",
 							"visibility": "private",
-							"type": "Array<String>"
+							"type": "String",
+							"multiplicity": "*"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -9736,7 +9750,8 @@
 							},
 							"name": "rightAnswers",
 							"visibility": "private",
-							"type": "Array<int>"
+							"type": "int",
+							"multiplicity": "*"
 						}
 					]
 				},
@@ -9797,7 +9812,10 @@
 							},
 							"name": "questions",
 							"visibility": "private",
-							"type": "Array<Question>"
+							"type": {
+								"$ref": "AAAAAAGOcLD2h7FkIOw="
+							},
+							"multiplicity": "*"
 						}
 					]
 				},
@@ -9832,7 +9850,10 @@
 							},
 							"name": "tests",
 							"visibility": "private",
-							"type": "Array<Test>"
+							"type": {
+								"$ref": "AAAAAAGOcLNkTrGmmjM="
+							},
+							"multiplicity": "*"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -9842,7 +9863,10 @@
 							},
 							"name": "takenTests",
 							"visibility": "private",
-							"type": "<TakenTest>"
+							"type": {
+								"$ref": "AAAAAAGOcLd6jLXsdxw="
+							},
+							"multiplicity": "*"
 						}
 					],
 					"operations": [
@@ -9932,7 +9956,10 @@
 									"_parent": {
 										"$ref": "AAAAAAGOcMJ44M/O/XA="
 									},
-									"type": "Array<TakenTest>",
+									"type": {
+										"$ref": "AAAAAAGOcLd6jLXsdxw="
+									},
+									"multiplicity": "*",
 									"direction": "return"
 								}
 							]
@@ -10107,6 +10134,18 @@
 									},
 									"name": "testeeName",
 									"type": "String"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAGOdRHFqGCnZQs=",
+									"_parent": {
+										"$ref": "AAAAAAGOcMOzddQ211M="
+									},
+									"type": {
+										"$ref": "AAAAAAGOcLd6jLXsdxw="
+									},
+									"multiplicity": "*",
+									"direction": "return"
 								}
 							]
 						}

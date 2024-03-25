@@ -28,7 +28,9 @@
         <!-- name appended to standard jar name to indicate shaded/executable version -->
         <shadedClassifierName>executable</shadedClassifierName>
         <junit-version>4.13.1</junit-version>
-        <java.compile-verison>1.8</java.compile-verison>
+        <java.compile-verison>21</java.compile-verison>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <slf4j-version>1.7.25</slf4j-version>
         <skipTests>false</skipTests>
     </properties>

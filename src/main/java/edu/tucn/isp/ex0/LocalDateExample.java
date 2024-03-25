@@ -6,7 +6,6 @@ import java.time.format.DateTimeFormatter;
 
 /**
  * @author Radu Miron
- * @version 1
  */
 public class LocalDateExample {
     public static void main(String[] args) {

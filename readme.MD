@@ -2,7 +2,7 @@
 
 In this lab you will create two small Java applications by using UML diagrams as reference. Please consider following general notes before start implementing:
 
-1. Look at some LocalDate examples in edu.tucn.isp.ex0.LocalDateExample
+1. Look at some LocalDate examples in edu.tucn.isp.ex0.LocalDateExample and edu.tucn.isp.ex0.RecordWithLambdaExample
 2. Create the Java application based on the provided UML diagrams.
 3. Add needed constructors, getters, setters, toString() and any other method you consider necessary.
 4. Implement the main method in edu.tucn.isp.ex(1|2).Exercise(1|2).
