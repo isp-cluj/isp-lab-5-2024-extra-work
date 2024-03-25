@@ -31,7 +31,7 @@ public class LibraryManagerImplTest {
     }
 
     @Test
-    public void borrowBook() {
+    public void testBorrowBook() {
     }
 
     @Test
